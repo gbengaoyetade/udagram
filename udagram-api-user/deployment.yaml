@@ -19,10 +19,7 @@ spec:
           image: gbengaps/udagram-api-user:v1
           ports:
             - containerPort: 80
-          volumeMounts:
-            - name: microservice-volume
-              mountPath: '/etc/microservice-volume'
-      volumes:
-        - name: microservice-volume
-          secret:
-            secretName: microservice-secret
+          envFrom:
+          - secretRef:
+              name: microservice-secret
+      
