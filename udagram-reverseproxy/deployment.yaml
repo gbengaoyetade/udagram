@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: udagram-reverseproxy
-          image: gbengaps/udagram-reverseproxy:v1
+          image: gbengaps/udagram-reverseproxy:v2
           ports:
             - containerPort: 80
       volumes:

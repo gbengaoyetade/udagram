@@ -10,10 +10,10 @@ script:
   - docker tag udagram-api-feed gbengaps/udagram-api-feed:v2
   - docker tag udagram-api-user gbengaps/udagram-api-user:v2
   - docker tag udagram-reverseproxy gbengaps/udagram-reverseproxy:v2
-  - docker tag udagram-frontend gbengaps/udagram-frontend:v2
+  - docker tag udagram-frontend gbengaps/udagram-frontend:v3
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push gbengaps/udagram-api-feed:v2
   - docker push gbengaps/udagram-api-user:v2
   - docker push gbengaps/udagram-reverseproxy:v2
-  - docker push gbengaps/udagram-frontend:v2
+  - docker push gbengaps/udagram-frontend:v3

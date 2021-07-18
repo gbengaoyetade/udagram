@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: udagram-frontend
-          image: gbengaps/udagram-frontend:v1
+          image: gbengaps/udagram-frontend:v3
           ports:
             - containerPort: 80
